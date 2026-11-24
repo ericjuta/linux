@@ -100,6 +100,7 @@ static int mux_control_deselect(struct mux_control *m) { (void)m;event('C');xbar
     static bool dcp_typec_keep_order(void) { return false; }
     static struct apple_dcp_typec_route * __attribute__((unused)) dcp_typec_lowest_free(struct apple_dcp_typec_port *p) { (void)p;return &route; }
     static struct apple_dcp_typec_route * __attribute__((unused)) dcp_typec_free_route(struct apple_dcp_typec_port *p) { (void)p;return &route; }
+    static int __attribute__((unused)) dcp_typec_reclaim_idle(struct apple_dcp_typec_port *p) { (void)p;return 0; }
     static int connect_calls;
     static int dcp_dptx_connect_oob(void *dev,unsigned n) { (void)dev;(void)n;connect_calls++;display.external_cable=true;display.dptxport[0].connected=true;display.typec_cable_connected=true;connector.connected=true;return 0; }
     static void dcp_retrain_oob(struct connector *c) { (void)c; }
