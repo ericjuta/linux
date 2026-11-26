@@ -279,3 +279,6 @@ mod t8122_pstate_cap {
         }
     }
 }
+
+#[path = "../../drivers/gpu/drm/asahi/m3/m3_recovery.rs"]
+mod m3_recovery;
